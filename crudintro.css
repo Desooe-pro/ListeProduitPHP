@@ -1,0 +1,44 @@
+/* Style global pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Style pour les cellules (th et td) */
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style pour l'en-tÃªte */
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Couleur de fond alternative pour les lignes paires */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Changement de couleur au survol */
+table tr:hover {
+    background-color: #ddd;
+}
+
+
+body {
+    animation-name: te;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes te {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: 36000deg;
+    }
+}
