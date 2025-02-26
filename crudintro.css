@@ -27,7 +27,13 @@ table tr:hover {
     background-color: #ddd;
 }
 
+a {
+    color: #444;
+    text-decoration: none;
+}
 
+
+/*
 body {
     animation-name: te;
     animation-duration: 60s;
@@ -41,4 +47,4 @@ body {
     100% {
         rotate: 36000deg;
     }
-}
+}*/

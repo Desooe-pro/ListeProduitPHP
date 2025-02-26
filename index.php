@@ -49,13 +49,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     <title>Liste des auteurs</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" style="padding: 8px 0 16px 8px">
         <label for="name">Nom :</label>
         <input type="text" id="name" name="name" required placeholder="Entrez le nom"/>
         <label for="prix">Prix :</label>
         <input type="text" id="prix" name="prix" required placeholder="Entrez le prix"/>
         <label for="quantite">Quantité :</label>
-        <input type="text" id="quantite" name="quantite" required placeholder="Entrez la description"/>
+        <input type="text" id="quantite" name="quantite" required placeholder="Entrez la quantité"/>
         <button type="submit">Envoyer</button>
     </form>
 <?php if(!empty($article)): ?>
@@ -66,6 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
             <th>Nom</th>
             <th>Prix</th>
             <th>Description</th>
+            <th>Modification</th>
+            <th>Suppression</th>
         </tr>
         </thead>
         <tbody>
@@ -76,6 +78,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
                 <td><?= htmlspecialchars($a['Designation_Article']) ?></td>
                 <td><?= htmlspecialchars($a['Prix_unitaire_Article']) ?></td>
                 <td><?= htmlspecialchars($a['Quantite_Article']) ?></td>
+                <td><a href="modif.php?id=<?= htmlspecialchars($a['Id_Article']) ?>">Modifier</a></td>
+                <td><a href="Suppression.php?id=<?= htmlspecialchars($a['Id_Article']) ?>">Supprimer</a></td>
             </tr>
         <?php endforeach;  ?>
         </tbody>
